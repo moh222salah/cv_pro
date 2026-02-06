@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional CV Generator - Create stunning bilingual CVs in Arabic and English">
+    <meta name="keywords" content="CV Generator, Resume Builder, Arabic CV, English CV, Professional Resume">
+    <meta name="author" content="Mohammed Salah">
+    <title>Professional CV Generator | Build Your Perfect Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="light-mode">
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <canvas id="particles"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-effect">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-file-alt"></i>
+                <span data-en="CV Generator" data-ar="منشئ السيرة الذاتية">CV Generator</span>
+            </div>
+            <div class="nav-controls">
+                <button class="lang-toggle glass-btn" id="langToggle">
+                    <i class="fas fa-language"></i>
+                    <span class="lang-text">EN</span>
+                </button>
+                <button class="theme-toggle glass-btn" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title" data-en="Build Your Professional CV in Minutes" 
+                    data-ar="أنشئ سيرتك الذاتية الاحترافية في دقائق">
+                    Build Your Professional CV in Minutes
+                </h1>
+                <p class="hero-subtitle" data-en="Create stunning bilingual CVs optimized for Egypt, Gulf countries, and international remote work" 
+                   data-ar="أنشئ سيرة ذاتية مذهلة بلغتين محسنة لمصر ودول الخليج والعمل عن بعد">
+                    Create stunning bilingual CVs optimized for Egypt, Gulf countries, and international remote work
+                </p>
+                <div class="hero-buttons">
+                    <a href="#form" class="cta-btn primary-btn smooth-scroll">
+                        <i class="fas fa-rocket"></i>
+                        <span data-en="Start Building" data-ar="ابدأ الإنشاء">Start Building</span>
+                    </a>
+                    <a href="#features" class="cta-btn secondary-btn smooth-scroll">
+                        <i class="fas fa-star"></i>
+                        <span data-en="Explore Features" data-ar="استكشف المميزات">Explore Features</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card glass-effect fade-in-up">
+                    <i class="fas fa-users stat-icon"></i>
+                    <div class="stat-number" data-count="10000">0</div>
+                    <p class="stat-label" data-en="CVs Created" data-ar="سيرة ذاتية تم إنشاؤها">CVs Created</p>
+                </div>
+                <div class="stat-card glass-effect fade-in-up" style="animation-delay: 0.1s;">
+                    <i class="fas fa-globe stat-icon"></i>
+                    <div class="stat-number" data-count="50">0</div>
+                    <p class="stat-label" data-en="Countries" data-ar="دولة">Countries</p>
+                </div>
+                <div class="stat-card glass-effect fade-in-up" style="animation-delay: 0.2s;">
+                    <i class="fas fa-language stat-icon"></i>
+                    <div class="stat-number" data-count="2">0</div>
+                    <p class="stat-label" data-en="Languages" data-ar="لغات">Languages</p>
+                </div>
+                <div class="stat-card glass-effect fade-in-up" style="animation-delay: 0.3s;">
+                    <i class="fas fa-star stat-icon"></i>
+                    <div class="stat-number" data-count="98">0</div>
+                    <p class="stat-label" data-en="Satisfaction Rate" data-ar="نسبة الرضا">Satisfaction %</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <h2 class="section-title fade-in" data-en="How It Works" data-ar="كيف يعمل">How It Works</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-icon glass-effect">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="timeline-content glass-effect">
+                        <h3 data-en="Step 1: Fill Your Information" data-ar="الخطوة 1: أدخل معلوماتك">Step 1: Fill Your Information</h3>
+                        <p data-en="Enter your details in Arabic or English - our smart system handles the rest" 
+                           data-ar="أدخل تفاصيلك بالعربية أو الإنجليزية - نظامنا الذكي يتولى الباقي">
+                            Enter your details in Arabic or English - our smart system handles the rest
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="timeline-icon glass-effect">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="timeline-content glass-effect">
+                        <h3 data-en="Step 2: Customize Design" data-ar="الخطوة 2: خصص التصميم">Step 2: Customize Design</h3>
+                        <p data-en="Choose to add your photo and select from professional templates" 
+                           data-ar="اختر إضافة صورتك واختر من القوالب الاحترافية">
+                            Choose to add your photo and select from professional templates
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="timeline-icon glass-effect">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="timeline-content glass-effect">
+                        <h3 data-en="Step 3: Preview & Adjust" data-ar="الخطوة 3: معاينة وتعديل">Step 3: Preview & Adjust</h3>
+                        <p data-en="Preview your CV in both languages with real-time updates" 
+                           data-ar="عاين سيرتك الذاتية بكلتا اللغتين مع تحديثات فورية">
+                            Preview your CV in both languages with real-time updates
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up" style="animation-delay: 0.6s;">
+                    <div class="timeline-icon glass-effect">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <div class="timeline-content glass-effect">
+                        <h3 data-en="Step 4: Download" data-ar="الخطوة 4: تحميل">Step 4: Download</h3>
+                        <p data-en="Get your professional CV in PDF format, ready to send" 
+                           data-ar="احصل على سيرتك الذاتية الاحترافية بصيغة PDF جاهزة للإرسال">
+                            Get your professional CV in PDF format, ready to send
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <h2 class="section-title fade-in" data-en="Powerful Features" data-ar="مميزات قوية">Powerful Features</h2>
+            <div class="features-grid">
+                <div class="feature-card glass-effect fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 data-en="Bilingual Support" data-ar="دعم لغتين">Bilingual Support</h3>
+                    <p data-en="Seamlessly switch between Arabic and English with automatic layout adjustment" 
+                       data-ar="التبديل بسلاسة بين العربية والإنجليزية مع ضبط تلقائي للتخطيط">
+                        Seamlessly switch between Arabic and English with automatic layout adjustment
+                    </p>
+                </div>
+                <div class="feature-card glass-effect fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 data-en="Mobile Optimized" data-ar="محسّن للموبايل">Mobile Optimized</h3>
+                    <p data-en="Perfect experience on all devices - phone, tablet, and desktop" 
+                       data-ar="تجربة مثالية على جميع الأجهزة - الهاتف والتابلت والكمبيوتر">
+                        Perfect experience on all devices - phone, tablet, and desktop
+                    </p>
+                </div>
+                <div class="feature-card glass-effect fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 data-en="Smart Design" data-ar="تصميم ذكي">Smart Design</h3>
+                    <p data-en="Dynamic layout adaptation based on your experience level and photo choice" 
+                       data-ar="تكيف ديناميكي للتخطيط بناءً على مستوى خبرتك واختيار الصورة">
+                        Dynamic layout adaptation based on your experience level and photo choice
+                    </p>
+                </div>
+                <div class="feature-card glass-effect fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <h3 data-en="Regional Standards" data-ar="معايير إقليمية">Regional Standards</h3>
+                    <p data-en="Optimized for Egypt, Gulf countries, and international remote work" 
+                       data-ar="محسّن لمصر ودول الخليج والعمل الدولي عن بعد">
+                        Optimized for Egypt, Gulf countries, and international remote work
+                    </p>
+                </div>
+                <div class="feature-card glass-effect fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 data-en="Instant Preview" data-ar="معاينة فورية">Instant Preview</h3>
+                    <p data-en="See changes in real-time as you type with live preview" 
+                       data-ar="شاهد التغييرات فورياً أثناء الكتابة مع المعاينة المباشرة">
+                        See changes in real-time as you type with live preview
+                    </p>
+                </div>
+                <div class="feature-card glass-effect fade-in-up" style="animation-delay: 0.5s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3 data-en="Professional Export" data-ar="تصدير احترافي">Professional Export</h3>
+                    <p data-en="Download high-quality PDF ready for printing and digital sharing" 
+                       data-ar="تنزيل PDF عالي الجودة جاهز للطباعة والمشاركة الرقمية">
+                        Download high-quality PDF ready for printing and digital sharing
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Form Section -->
+    <section class="form-section" id="form">
+        <div class="container">
+            <h2 class="section-title fade-in" data-en="Create Your CV" data-ar="أنشئ سيرتك الذاتية">Create Your CV</h2>
+            <form id="cvForm" class="cv-form glass-effect fade-in-up">
+                <!-- Personal Information -->
+                <div class="form-section-header">
+                    <i class="fas fa-user-circle"></i>
+                    <h3 data-en="Personal Information" data-ar="المعلومات الشخصية">Personal Information</h3>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-en="Full Name *" data-ar="الاسم الكامل *">Full Name *</label>
+                        <input type="text" id="fullName" required placeholder="John Doe / محمد صالح">
+                    </div>
+                    <div class="form-group">
+                        <label data-en="Job Title *" data-ar="المسمى الوظيفي *">Job Title *</label>
+                        <input type="text" id="jobTitle" required placeholder="Full Stack Developer / مطور ويب">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-en="Email *" data-ar="البريد الإلكتروني *">Email *</label>
+                        <input type="email" id="email" required placeholder="example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label data-en="Phone *" data-ar="الهاتف *">Phone *</label>
+                        <input type="tel" id="phone" required placeholder="+20 111 390 3070">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-en="Location" data-ar="الموقع">Location</label>
+                        <input type="text" id="location" placeholder="Cairo, Egypt / القاهرة، مصر">
+                    </div>
+                    <div class="form-group">
+                        <label data-en="LinkedIn" data-ar="لينكد إن">LinkedIn</label>
+                        <input type="url" id="linkedin" placeholder="linkedin.com/in/username">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Professional Summary *" data-ar="الملخص المهني *">Professional Summary *</label>
+                    <textarea id="summary" required rows="4" placeholder="Brief professional summary highlighting your key strengths and experience..."></textarea>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="form-section-header">
+                    <i class="fas fa-briefcase"></i>
+                    <h3 data-en="Work Experience" data-ar="الخبرات العملية">Work Experience</h3>
+                </div>
+                
+                <div id="experienceContainer">
+                    <div class="experience-item" data-index="0">
+                        <div class="item-header">
+                            <span class="item-number">1</span>
+                            <button type="button" class="remove-item" onclick="removeExperience(0)" style="display:none;">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-en="Position" data-ar="المنصب">Position</label>
+                                <input type="text" class="exp-position" placeholder="Senior Developer">
+                            </div>
+                            <div class="form-group">
+                                <label data-en="Company" data-ar="الشركة">Company</label>
+                                <input type="text" class="exp-company" placeholder="Tech Company">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-en="Duration" data-ar="المدة">Duration</label>
+                                <input type="text" class="exp-duration" placeholder="Jan 2020 - Present">
+                            </div>
+                            <div class="form-group">
+                                <label data-en="Location" data-ar="الموقع">Location</label>
+                                <input type="text" class="exp-location" placeholder="Remote / Riyadh">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label data-en="Responsibilities (one per line)" data-ar="المسؤوليات (واحدة في كل سطر)">Responsibilities (one per line)</label>
+                            <textarea class="exp-responsibilities" rows="3" placeholder="• Led development of web applications&#10;• Managed team of 5 developers&#10;• Improved performance by 40%"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="add-btn" id="addExperience">
+                    <i class="fas fa-plus"></i>
+                    <span data-en="Add Experience" data-ar="إضافة خبرة">Add Experience</span>
+                </button>
+
+                <!-- Education Section -->
+                <div class="form-section-header">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3 data-en="Education" data-ar="التعليم">Education</h3>
+                </div>
+                
+                <div id="educationContainer">
+                    <div class="education-item" data-index="0">
+                        <div class="item-header">
+                            <span class="item-number">1</span>
+                            <button type="button" class="remove-item" onclick="removeEducation(0)" style="display:none;">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-en="Degree" data-ar="الدرجة">Degree</label>
+                                <input type="text" class="edu-degree" placeholder="Bachelor of Computer Science">
+                            </div>
+                            <div class="form-group">
+                                <label data-en="Institution" data-ar="المؤسسة">Institution</label>
+                                <input type="text" class="edu-institution" placeholder="University Name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-en="Year" data-ar="السنة">Year</label>
+                                <input type="text" class="edu-year" placeholder="2015 - 2019">
+                            </div>
+                            <div class="form-group">
+                                <label data-en="Grade/GPA" data-ar="التقدير">Grade/GPA</label>
+                                <input type="text" class="edu-grade" placeholder="Excellent / 3.8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="add-btn" id="addEducation">
+                    <i class="fas fa-plus"></i>
+                    <span data-en="Add Education" data-ar="إضافة تعليم">Add Education</span>
+                </button>
+
+                <!-- Skills Section -->
+                <div class="form-section-header">
+                    <i class="fas fa-code"></i>
+                    <h3 data-en="Skills" data-ar="المهارات">Skills</h3>
+                </div>
+                
+                <div class="form-group">
+                    <label data-en="Technical Skills (comma separated)" data-ar="المهارات التقنية (مفصولة بفاصلة)">Technical Skills (comma separated)</label>
+                    <input type="text" id="skills" placeholder="JavaScript, Python, React, Node.js, SQL, MongoDB">
+                </div>
+
+                <!-- Languages Section -->
+                <div class="form-section-header">
+                    <i class="fas fa-language"></i>
+                    <h3 data-en="Languages" data-ar="اللغات">Languages</h3>
+                </div>
+                
+                <div id="languagesContainer">
+                    <div class="language-item" data-index="0">
+                        <div class="item-header">
+                            <span class="item-number">1</span>
+                            <button type="button" class="remove-item" onclick="removeLanguage(0)" style="display:none;">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-en="Language" data-ar="اللغة">Language</label>
+                                <input type="text" class="lang-name" placeholder="English / العربية">
+                            </div>
+                            <div class="form-group">
+                                <label data-en="Proficiency" data-ar="المستوى">Proficiency</label>
+                                <select class="lang-level">
+                                    <option value="Native">Native / اللغة الأم</option>
+                                    <option value="Fluent">Fluent / بطلاقة</option>
+                                    <option value="Advanced">Advanced / متقدم</option>
+                                    <option value="Intermediate">Intermediate / متوسط</option>
+                                    <option value="Basic">Basic / أساسي</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="add-btn" id="addLanguage">
+                    <i class="fas fa-plus"></i>
+                    <span data-en="Add Language" data-ar="إضافة لغة">Add Language</span>
+                </button>
+
+                <!-- Photo Option -->
+                <div class="form-section-header">
+                    <i class="fas fa-camera"></i>
+                    <h3 data-en="Photo (Optional)" data-ar="الصورة (اختياري)">Photo (Optional)</h3>
+                </div>
+                
+                <div class="photo-upload-container">
+                    <div class="photo-option">
+                        <input type="checkbox" id="includePhoto">
+                        <label for="includePhoto" class="checkbox-label">
+                            <span data-en="Include photo in CV" data-ar="تضمين الصورة في السيرة الذاتية">Include photo in CV</span>
+                        </label>
+                    </div>
+                    <div class="photo-upload" id="photoUploadSection" style="display: none;">
+                        <input type="file" id="photoInput" accept="image/*">
+                        <label for="photoInput" class="photo-upload-label">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span data-en="Click to upload photo" data-ar="انقر لتحميل الصورة">Click to upload photo</span>
+                        </label>
+                        <div class="photo-preview" id="photoPreview"></div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="form-actions">
+                    <div class="action-group">
+                        <button type="button" class="action-btn preview-btn" id="previewBtn">
+                            <i class="fas fa-eye"></i>
+                            <span data-en="Preview" data-ar="معاينة">Preview</span>
+                        </button>
+                        <button type="button" class="action-btn download-btn" id="downloadBtn">
+                            <i class="fas fa-download"></i>
+                            <span data-en="Download" data-ar="تحميل">Download</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-section" id="tech">
+        <div class="container">
+            <h2 class="section-title fade-in" data-en="Built With Modern Technology" data-ar="مبني بأحدث التقنيات">Built With Modern Technology</h2>
+            <div class="tech-grid">
+                <div class="tech-card glass-effect fade-in-up">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-card glass-effect fade-in-up" style="animation-delay: 0.1s;">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-card glass-effect fade-in-up" style="animation-delay: 0.2s;">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-card glass-effect fade-in-up" style="animation-delay: 0.3s;">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>jsPDF</span>
+                </div>
+                <div class="tech-card glass-effect fade-in-up" style="animation-delay: 0.4s;">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span data-en="Responsive" data-ar="متجاوب">Responsive</span>
+                </div>
+                <div class="tech-card glass-effect fade-in-up" style="animation-delay: 0.5s;">
+                    <i class="fas fa-bolt"></i>
+                    <span data-en="Fast" data-ar="سريع">Fast</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-content glass-effect fade-in">
+                <h2 data-en="Ready to Build Your Professional CV?" data-ar="جاهز لإنشاء سيرتك الذاتية الاحترافية؟">
+                    Ready to Build Your Professional CV?
+                </h2>
+                <p data-en="Start creating your bilingual CV now and stand out from the competition" 
+                   data-ar="ابدأ في إنشاء سيرتك الذاتية بلغتين الآن وتميز عن المنافسين">
+                    Start creating your bilingual CV now and stand out from the competition
+                </p>
+                <div class="cta-buttons">
+                    <a href="#form" class="cta-btn primary-btn smooth-scroll">
+                        <i class="fas fa-rocket"></i>
+                        <span data-en="Get Started Free" data-ar="ابدأ مجاناً">Get Started Free</span>
+                    </a>
+                    <a href="https://moh222salah.github.io/cv" class="cta-btn secondary-btn" target="_blank">
+                        <i class="fas fa-briefcase"></i>
+                        <span data-en="View Portfolio" data-ar="شاهد المعرض">View Portfolio</span>
+                    </a>
+                    <a href="https://wa.me/201113903070" class="cta-btn whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span data-en="Contact on WhatsApp" data-ar="تواصل واتساب">Contact on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer glass-effect">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-en="CV Generator" data-ar="منشئ السيرة الذاتية">CV Generator</h4>
+                    <p data-en="Professional bilingual CV builder for modern professionals" 
+                       data-ar="منشئ سير ذاتية احترافي بلغتين للمحترفين المعاصرين">
+                        Professional bilingual CV builder for modern professionals
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" class="smooth-scroll" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                        <li><a href="#features" class="smooth-scroll" data-en="Features" data-ar="المميزات">Features</a></li>
+                        <li><a href="#form" class="smooth-scroll" data-en="Create CV" data-ar="إنشاء سيرة ذاتية">Create CV</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact" data-ar="تواصل">Contact</h4>
+                    <ul>
+                        <li><a href="https://moh222salah.github.io/cv" target="_blank">
+                            <i class="fas fa-briefcase"></i> Portfolio
+                        </a></li>
+                        <li><a href="https://wa.me/201113903070" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CV Generator. <span data-en="All rights reserved" data-ar="جميع الحقوق محفوظة">All rights reserved</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Language Selection Modal -->
+    <div class="modal" id="langModal">
+        <div class="modal-content glass-effect">
+            <h3 data-en="Select Language" data-ar="اختر اللغة">Select Language</h3>
+            <div class="lang-options">
+                <button class="lang-option-btn" data-lang="en">
+                    <i class="fas fa-file-alt"></i>
+                    <span>English CV</span>
+                </button>
+                <button class="lang-option-btn" data-lang="ar">
+                    <i class="fas fa-file-alt"></i>
+                    <span>السيرة الذاتية بالعربية</span>
+                </button>
+            </div>
+            <button class="close-modal" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div class="modal preview-modal" id="previewModal">
+        <div class="modal-content preview-content">
+            <div class="preview-header">
+                <h3 data-en="CV Preview" data-ar="معاينة السيرة الذاتية">CV Preview</h3>
+                <button class="close-modal" id="closePreview">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="preview-body" id="previewBody"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
